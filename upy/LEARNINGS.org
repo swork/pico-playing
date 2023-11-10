@@ -1,0 +1,14 @@
+#+TITLE: Learnings so far re micropython
+
+First: It's the easy way, though the hard way (C) isn't that hard.
+
+Second: The easy way is full of potholes.
+
+ - RP2 Timer() API is only superficially similar to the rest of uPy.
+
+ - Many many standard libraries are not available, including some that
+   just seem like they must have been "too much trouble" like functools.
+
+Upshot: Use uPy to sort out bit-twiddling procedures, but ignore its
+higher-level APIs in favor of just writing stuff in C. The SDK seems to
+be better documented there too.
